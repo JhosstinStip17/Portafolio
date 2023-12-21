@@ -44,7 +44,7 @@ header::after{
     content :"";
     position :absolute;
     z-index: 9;
-    background : url("../img/Vector1.png");
+    background : url("../img/Group1.png");
     background-size: cover;
     bottom :0;
     left :0 ;
@@ -68,7 +68,7 @@ header::after{
 #hero .texto1{
     font-family: var(--font-titulos);
     font-size: 60px;
-    margin-top: 60px;
+    margin-top: 5px;
     text-align: start;
     margin-left: 200px;
     color: var(--color-principal);
@@ -78,9 +78,8 @@ header::after{
 #hero .texto2{
     font-family: var(--font-titulos);
     font-size: 30px;
-    margin-top: 20px;
     text-align: start;
-    margin-top: 50px;
+    margin-top: 12px;
     margin-left: 200px;
     color: var(--color-principal);
     text-shadow: rgba(0, 0, 0, 0.815)  12px 10px 3px;
@@ -192,6 +191,10 @@ header::after{
     text-align: left;
 }
 
+#proyectos img{
+    width: 586px;
+}
+
 #habilidades-experiencias{
     background: linear-gradient(0deg, #AF141E ,rgb(75, 2, 2) ,#000, #000000 );
     color: var(--color-principal);
@@ -203,13 +206,23 @@ header::after{
 
 #habilidades-experiencias #accordionFlushExper{
     width: 600px;
-    padding-left: 150px;
+    padding-left: 108px;
     color: var(--color-tercero);
     margin-top: 50px;
+    font-family: var(--font-subtitulos);
 }
 
 #habilidades-experiencias .boton-acor{
     border: 3px var(--color-tercero) solid;
+    border-radius: 20px;
+    background: var(--color-secundario);
+    color: var(--color-principal);
+}
+
+#habilidades-experiencias .accordion-item {
+    border-radius: 20px;
+    background: linear-gradient(177deg, var(--color-tercero), var(--color-secundario));
+    color: var(--color-principal);
 }
 
 /* #habilidades-experiencias p{
@@ -363,7 +376,7 @@ svg{
 
 
 
-@media screen and (min-width:820px) and (max-width:1280px){
+@media screen and (min-width:821px) and (max-width:1280px){
     #hero .fotoo{
         right: 119px;
     }
@@ -378,6 +391,11 @@ svg{
 
     .skill{
         margin: 41px;
+    }
+
+    header::after {
+        height: 261px;
+        bottom: -1px;
     }
 }
 
@@ -398,7 +416,7 @@ svg{
     }
 
     #hero .texto2{
-        margin-top: 82px;
+        margin-top: 46px;
         margin-left: 50px;
         margin-right: 117px;
     }
@@ -406,34 +424,43 @@ svg{
     #habilidades-experiencias .porcentajes{
         justify-content: space-between;
     }
+
+    header::after {
+        height: 133px;
+    }
 }
 
-@media screen and (min-width:320px) and (max-width:600px){
+@media screen and (min-width:321px) and (max-width:600px){
     #hero{
         height: 640px;
     }
 
     #hero .texto1{
         font-size: 39px;
-        margin-top: 21px;
-        margin-left: 54px;
+        margin-top: 35px;
+        margin-left: 27px;
     }
 
     #hero .texto2{
-        font-size: 24px;
+        font-size: 27px;
         margin-left: 15px;
-        margin-top: 29px;
+        margin-top: 39px;
     }
 
     #hero .fotoo{
         right: 118px;
-        height: 70%;
-        margin-top: 292px;
+        height: 78%;
+        margin-top: 226px;
         border-radius: 50%;
     }
 
     #hero .paginas{
-        margin-left: 266px;
+        margin-left: -36px;
+    }
+
+    header::after {
+        height: 93px;
+        bottom: -1px;
     }
 
     #sobre-mi{
@@ -468,9 +495,43 @@ svg{
     #habilidades-experiencias p{
         padding-left: 33px;
     }
+
+    #habilidades-experiencias #accordionFlushExper {
+        width: 526px;
+        padding-left: 36px;
+    }
+
 }
 
+@media screen and (min-width:140px) and (max-width:320px){
+    
+    #hero .texto1 {
+        margin-top: 50px;
+        margin-left: 53px;
+        font-size: 37px;
+    }
 
+    #hero .texto2 {
+        margin-top: 60px;
+        margin-left: 20px;
+    } 
+
+    #hero .paginas {
+        margin-top: 28px;
+    }
+
+    #hero .fotoo {
+        display: none;
+    }
+
+    header::after {
+        display: none;
+    }
+    
+    #educacion .cuadro-estudios {
+        width: 213px;
+    }
+}
 
 
 
