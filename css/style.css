@@ -1,111 +1,127 @@
-
 /* VARIABLES */
-:root{
+:root {
     --color-principal: white;
     --color-secundario: #000;
     --color-tercero: #AF141E;
-    --fontsize-titulos: 40px;
+    --fontsize-titulos: clamp(28px, 5vw, 40px);
+    --fontsize-parrafos: clamp(16px, 3vw, 25px);
     --font-subtitulos: 'Inter', sans-serif;
     --font-titulos: 'Viga', sans-serif;
     --font-textos: 'Lato', sans-serif;
-    --fontsize-parrafos: 25px;
 }
 
-nav{
-    background: linear-gradient(to right, #950101 500px,rgb(75, 2, 2) 1000px, #000 1700px);
+/* Estilos base */
+* {
+    box-sizing: border-box;
 }
 
-nav .barra{
+body {
+    overflow-x: hidden;
+}
+
+nav {
+    background: linear-gradient(to right, #950101 500px, rgb(75, 2, 2) 1000px, #000 1700px);
+}
+
+nav .barra {
     border-bottom: var(--color-principal) solid 3px;
     padding: 0;
-    /* z-index: 2; */
 }
 
-nav .nav-link{
+nav .nav-link {
     color: var(--color-principal);
 }
 
-nav ul li{
+nav ul li {
     font-size: 23px;
     font-family: var(--font-titulos);
-    padding-left: 8px ;
+    padding-left: 8px;
     padding-top: 8px;
     padding-bottom: 8px;
 }
 
-header{
-    position:relative;
-    z-index :1
+header {
+    position: relative;
+    z-index: 1
 }
 
-header::after{
+header::after {
     width: 100%;
     height: 311px;
-    content :"";
-    position :absolute;
+    content: "";
+    position: absolute;
     z-index: 9;
-    background : url("../img/Group1.png");
+    background: url("../img/Group1.png");
     background-size: cover;
-    bottom :0;
-    left :0 ;
+    bottom: 0;
+    left: 0;
 }
 
 #hero {
-    background: linear-gradient(to right, #950101 500px,rgb(75, 2, 2) 1000px, #000 1700px);
+    background: linear-gradient(to right, #950101 500px, rgb(75, 2, 2) 1000px, #000 1700px);
     height: 550px;
     position: relative;
+    padding: 2rem 0;
 }
 
-#hero .fotoo{
+#hero .fotoo {
+    display: none;
+    /* Ocultar en móvil por defecto */
+}
+
+/* #hero .fotoo {
     width: auto;
     height: 120%;
     position: absolute;
     top: -30px;
     right: 340px;
     z-index: 1;
-}
+} */
 
-#hero .texto1{
+#hero .texto1 {
     font-family: var(--font-titulos);
-    font-size: 60px;
-    margin-top: 5px;
-    text-align: start;
-    margin-left: 200px;
+    font-size: clamp(30px, 5vw, 60px);
+    margin: 1rem;
+    text-align: center;
     color: var(--color-principal);
-    text-shadow: rgba(0, 0, 0, 0.815)  12px 10px 3px;
+    text-shadow: rgba(0, 0, 0, 0.815) 12px 10px 3px;
 }
 
-#hero .texto2{
+#hero .texto2 {
     font-family: var(--font-titulos);
-    font-size: 30px;
-    text-align: start;
-    margin-top: 12px;
-    margin-left: 200px;
+    font-size: clamp(20px, 3vw, 30px);
+    margin: 1rem;
+    text-align: center;
     color: var(--color-principal);
-    text-shadow: rgba(0, 0, 0, 0.815)  12px 10px 3px;
+    text-shadow: rgba(0, 0, 0, 0.815) 12px 10px 3px;
 }
 
-#hero .paginas{
-    margin-top: 80px;
+#hero .links-fotos {
+    z-index: 10;
+}
+
+#hero .paginas {
+    margin-top: 2rem;
     transition: .5s;
+    z-index: 10;
 }
 
-#hero .paginas:hover{
+#hero .paginas:hover {
     transform: scale(1.2);
 }
 
-#sobre-mi{
+#sobre-mi {
     z-index: 5;
     position: relative;
     background: var(--color-secundario);
     padding: 100px;
 }
 
-#sobre-mi .texto-sm{
+#sobre-mi .texto-sm {
     padding-left: 100px;
 }
 
-#sobre-mi h3{
+#sobre-mi h3 {
     font-family: var(--font-titulos);
     font-size: 40px;
     text-align: left;
@@ -113,19 +129,19 @@ header::after{
     margin-top: 80px;
 }
 
-#sobre-mi p{
+#sobre-mi p {
     font-size: var(--fontsize-parrafos);
     text-align: left;
     color: var(--color-principal);
     margin-top: 50px;
 }
 
-#educacion{
+#educacion {
     background: var(--color-secundario);
-    padding: 60px; 
+    padding: 60px;
 }
 
-#educacion h3{
+#educacion h3 {
     font-size: var(--fontsize-titulos);
     color: var(--color-principal);
     font-family: var(--font-subtitulos);
@@ -133,18 +149,18 @@ header::after{
     font-weight: bold;
 }
 
-#educacion h4{
+#educacion h4 {
     font-size: 30px;
     color: var(--color-principal);
     margin-bottom: 35px;
 }
 
-#educacion p{
+#educacion p {
     color: var(--color-principal);
     font-size: var(--fontsize-parrafos);
 }
 
-#educacion .cuadro-estudios{
+#educacion .cuadro-estudios {
     height: 320px;
     width: 340px;
     border: var(--color-tercero) solid 3px;
@@ -153,12 +169,12 @@ header::after{
     border-radius: 10px;
 }
 
-#educacion .texto-cursos{
+#educacion .texto-cursos {
     font-size: 20px;
     text-align: left;
 }
 
-#educacion .border-cursos1{
+#educacion .border-cursos1 {
     border-left: #AF141E solid 6px;
     margin-top: 100px;
     margin-left: 90px;
@@ -166,53 +182,54 @@ header::after{
     padding-left: 50px;
 }
 
-#educacion .border-cursos2{
+#educacion .border-cursos2 {
     border-left: #AF141E solid 6px;
     margin-top: 100px;
     padding-bottom: 20px;
     padding-left: 50px;
 }
 
-#proyectos{
+#proyectos {
     background: var(--color-secundario);
     color: var(--color-principal);
 }
 
-#proyectos h3{
+#proyectos h3 {
     font-size: var(--fontsize-titulos);
 }
 
-#proyectos .proyect{
+#proyectos .proyect {
     padding: 50px;
 }
 
-#proyectos p{
+#proyectos p {
     font-size: 20px;
     text-align: left;
 }
 
-#proyectos img{
+#proyectos img {
     width: 586px;
 }
 
-#habilidades-experiencias{
-    background: linear-gradient(0deg, #AF141E ,rgb(75, 2, 2) ,#000, #000000 );
+#habilidades-experiencias {
+    background: linear-gradient(0deg, #AF141E, rgb(75, 2, 2), #000, #000000);
     color: var(--color-principal);
+    padding: 2rem 0;
 }
 
-#habilidades-experiencias h3{
+#habilidades-experiencias h3 {
     font-size: var(--fontsize-titulos);
+    margin-bottom: 2rem;
 }
 
-#habilidades-experiencias #accordionFlushExper{
-    width: 600px;
-    padding-left: 108px;
-    color: var(--color-tercero);
-    margin-top: 50px;
-    font-family: var(--font-subtitulos);
+#habilidades-experiencias #accordionFlushExper {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
-#habilidades-experiencias .boton-acor{
+#habilidades-experiencias .boton-acor {
     border: 3px var(--color-tercero) solid;
     border-radius: 20px;
     background: var(--color-secundario);
@@ -225,26 +242,22 @@ header::after{
     color: var(--color-principal);
 }
 
-/* #habilidades-experiencias p{
-    font-size: 20px;
-    padding-top: 70px;
-    text-align: left;
-    padding-left: 150px;
-} */
 
-#habilidades-experiencias .porcentajes{
+#habilidades-experiencias .porcentajes {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3rem;
 }
 
-.skill{
+.skill {
     width: 100px;
     height: 100px;
     position: relative;
     margin: 56px;
 }
 
-.outer{
+.outer {
     height: 100px;
     width: 100px;
     border-radius: 50%;
@@ -253,31 +266,31 @@ header::after{
                 -1px -1px 10px -1px rgba(255,255,255,0.7) */
 }
 
-.inner{
+.inner {
     height: 80px;
     width: 80px;
     border-radius: 50%;
     /* display: flex; */
     align-items: center;
-    justify-content: center  ;
+    justify-content: center;
     /* box-shadow: inset -2px -2px 6px -1px rgba(0,0,0,0.2),
                 inset 0px 0px 6px -1px rgba(255,255,255,0.7), 
                 -0.5px -0.5px 0px rgba(0,0,0,0.15),
                 0px 12px 10px -10px rgba(0,0,0,0.05); */
-}              
+}
 
-#name-skill{
+#name-skill {
     font-size: 15px;
     margin-top: 20px;
     margin-left: 8px;
 }
 
-#number{
+#number {
     font-weight: 500px;
     color: var(--color-principal);
 }
 
-.circle1{
+.circle1 {
     fill: none;
     stroke: var(--color-tercero);
     stroke-width: 10px;
@@ -286,20 +299,20 @@ header::after{
     animation: anim 2s linear forwards;
 }
 
-svg{
+svg {
     position: absolute;
     top: 0;
     left: 0;
 }
 
-@keyframes anim{
-    100%{
-        stroke-dashoffset: 75;
+@keyframes anim {
+    100% {
+        stroke-dashoffset: 20;
     }
 }
 
 
-.circle2{
+.circle2 {
     fill: none;
     stroke: var(--color-tercero);
     stroke-width: 10px;
@@ -308,13 +321,13 @@ svg{
     animation: anim2 2s linear forwards;
 }
 
-@keyframes anim2{
-    100%{
+@keyframes anim2 {
+    100% {
         stroke-dashoffset: 125;
     }
 }
 
-.circle3{
+.circle3 {
     fill: none;
     stroke: var(--color-tercero);
     stroke-width: 10px;
@@ -323,13 +336,13 @@ svg{
     animation: anim3 2s linear forwards;
 }
 
-@keyframes anim3{
-    100%{
-        stroke-dashoffset: 200;
+@keyframes anim3 {
+    100% {
+        stroke-dashoffset: 150;
     }
 }
 
-.circle4{
+.circle4 {
     fill: none;
     stroke: var(--color-tercero);
     stroke-width: 10px;
@@ -338,13 +351,13 @@ svg{
     animation: anim4 2s linear forwards;
 }
 
-@keyframes anim4{
-    100%{
-        stroke-dashoffset: 75;
+@keyframes anim4 {
+    100% {
+        stroke-dashoffset: 25;
     }
 }
 
-.circle5{
+.circle5 {
     fill: none;
     stroke: var(--color-tercero);
     stroke-width: 10px;
@@ -353,13 +366,13 @@ svg{
     animation: anim5 2s linear forwards;
 }
 
-@keyframes anim5{
-    100%{
-        stroke-dashoffset: 50;
+@keyframes anim5 {
+    100% {
+        stroke-dashoffset: 95;
     }
 }
 
-.circle6{
+.circle6 {
     fill: none;
     stroke: var(--color-tercero);
     stroke-width: 10px;
@@ -368,170 +381,98 @@ svg{
     animation: anim6 2s linear forwards;
 }
 
-@keyframes anim6{
-    100%{
-        stroke-dashoffset: 220;
+@keyframes anim6 {
+    100% {
+        stroke-dashoffset: 120;
+    }
+}
+
+.circle7 {
+    fill: none;
+    stroke: var(--color-tercero);
+    stroke-width: 10px;
+    stroke-dasharray: 250;
+    stroke-dashoffset: 250;
+    animation: anim7 2s linear forwards;
+}
+
+@keyframes anim7 {
+    100% {
+        stroke-dashoffset: 115;
+    }
+}
+
+.circle8 {
+    fill: none;
+    stroke: var(--color-tercero);
+    stroke-width: 10px;
+    stroke-dasharray: 250;
+    stroke-dashoffset: 250;
+    animation: anim8 2s linear forwards;
+}
+
+@keyframes anim8 {
+    100% {
+        stroke-dashoffset: 80;
+    }
+}
+
+.circle9 {
+    fill: none;
+    stroke: var(--color-tercero);
+    stroke-width: 10px;
+    stroke-dasharray: 250;
+    stroke-dashoffset: 250;
+    animation: anim9 2s linear forwards;
+}
+
+@keyframes anim9 {
+    100% {
+        stroke-dashoffset: 115;
     }
 }
 
 
-
-@media screen and (min-width:821px) and (max-width:1280px){
-    #hero .fotoo{
-        right: 119px;
-    }
-
-    #hero .texto1{
-        margin-left: 82px;
-    }
-
-    #hero .texto2{
-        margin-left: 90px;
-    }
-
-    .skill{
-        margin: 41px;
-    }
-
-    header::after {
-        height: 261px;
-        bottom: -1px;
-    }
-}
-
-
-/* TABLE */
-
-@media screen and (min-width:768px) and (max-width:820px){
-    #hero{
-        height: 498px;
-    }
-
-    #hero .fotoo{
-        right: 63px;
-    }
-
-    #hero .texto1{
-        margin-left: 30px;
-    }
-
-    #hero .texto2{
-        margin-top: 46px;
-        margin-left: 50px;
-        margin-right: 117px;
-    }
-
-    #habilidades-experiencias .porcentajes{
-        justify-content: space-between;
-    }
-
-    header::after {
-        height: 133px;
-    }
-}
-
-@media screen and (min-width:321px) and (max-width:600px){
-    #hero{
-        height: 640px;
-    }
-
-    #hero .texto1{
-        font-size: 39px;
-        margin-top: 35px;
-        margin-left: 27px;
-    }
-
-    #hero .texto2{
-        font-size: 27px;
-        margin-left: 15px;
-        margin-top: 39px;
-    }
-
-    #hero .fotoo{
-        right: 118px;
-        height: 78%;
-        margin-top: 226px;
-        border-radius: 50%;
-    }
-
-    #hero .paginas{
-        margin-left: -36px;
-    }
-
-    header::after {
-        height: 93px;
-        bottom: -1px;
-    }
-
-    #sobre-mi{
-        padding: 0px;
-    }
-
-    #sobre-mi .img-sm{
-        width: 262px;
-        margin-top: 100px;
-    }
-
-    #sobre-mi .texto-sm {
-        padding-left: 53px;
-    }
-
-    #educacion h3 {
-        font-size: 28px;
-    }
-
-    #educacion .border-cursos1{
-        margin-left: 0px;
-    }
-
-    #proyectos .caru1{
-        width: 283px;
-    }
-
-    #habilidades-experiencias .porcentajes{
-        justify-content: space-around;
-    }
-
-    #habilidades-experiencias p{
-        padding-left: 33px;
-    }
-
-    #habilidades-experiencias #accordionFlushExper {
-        width: 526px;
-        padding-left: 36px;
-    }
-
-}
-
-@media screen and (min-width:140px) and (max-width:320px){
-    
-    #hero .texto1 {
-        margin-top: 50px;
-        margin-left: 53px;
-        font-size: 37px;
-    }
-
-    #hero .texto2 {
-        margin-top: 60px;
-        margin-left: 20px;
-    } 
-
-    #hero .paginas {
-        margin-top: 28px;
-    }
-
+@media (min-width: 992px) {
     #hero .fotoo {
-        display: none;
+        display: block;
+        position: absolute;
+        height: 120%;
+        top: -30px;
+        right: 340px;
+        z-index: 1;
     }
 
-    header::after {
-        display: none;
+    #hero .texto1,
+    #hero .texto2 {
+        text-align: start;
+        margin-left: 200px;
     }
-    
-    #educacion .cuadro-estudios {
-        width: 213px;
+
+    .navbar-collapse {
+        background: none;
+        padding: 0;
     }
 }
 
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: linear-gradient(to right, #950101, rgb(75, 2, 2));
+        padding: 1rem;
+    }
 
+    nav ul li {
+        text-align: center;
+        font-size: 18px;
+        padding: 5px;
+    }
 
+    #habilidades-experiencias .porcentajes {
+        order: 2;
+    }
+
+    #accordionFlushExper {
+        order: 1;
+        margin-bottom: 2rem;
+    }
+}
