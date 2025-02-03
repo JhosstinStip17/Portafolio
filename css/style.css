@@ -456,6 +456,14 @@ svg {
 }
 
 @media (max-width: 991px) {
+
+    [data-aos="fade-up-left"],
+    [data-aos="fade-left"] {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
     .navbar-collapse {
         background: linear-gradient(to right, #950101, rgb(75, 2, 2));
         padding: 1rem;
@@ -465,6 +473,30 @@ svg {
         text-align: center;
         font-size: 18px;
         padding: 5px;
+    }
+
+    #hero .links-fotos {
+        margin-top: 90px;
+    }
+
+    #sobre-mi {
+        padding: 40px;
+    }
+
+    #sobre-mi .texto-sm {
+        padding-left: 0;
+    }
+
+    #sobre-mi .img-sm {
+        display: none;
+    }
+
+    #educacion .border-cursos1 {
+        margin-left: 0px;
+    }
+
+    #educacion h3 {
+        font-size: 18px;
     }
 
     #habilidades-experiencias .porcentajes {
