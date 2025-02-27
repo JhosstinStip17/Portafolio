@@ -93,6 +93,7 @@ let interval8 = setInterval(() => {
         number8.innerHTML = counter8 + "%";
     }
 }, 50);
+
 // noveno contador
 let number9 = document.getElementById("number9");
 let counter9 = 0;
@@ -102,6 +103,18 @@ let interval9 = setInterval(() => {
     } else {
         counter9 += 1;
         number9.innerHTML = counter9 + "%";
+    }
+}, 50);
+
+// noveno contador
+let number10 = document.getElementById("number10");
+let counter10 = 0;
+let interval10 = setInterval(() => {
+    if (counter10 == 70) {
+        clearInterval(interval10);
+    } else {
+        counter10 += 1;
+        number10.innerHTML = counter10 + "%";
     }
 }, 50);
 
